@@ -1,0 +1,87 @@
+.auth-page{
+    background-image: url('/assets/img/auth-bg.png');
+}
+
+.form-login{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login input{
+    border-color: rgb(0, 153, 255);
+}
+
+input {
+    border-radius: 0 !important;
+}
+
+.form-login .card{
+    border-radius: 10px !important;
+    background: linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 0.01%, #FFFFFF 46.81%);
+    color: rgb(66, 66, 66);
+}
+
+.upload-photo{
+    margin-top: 0 !important;
+    width: 75%;
+}
+
+.form-login .card-body{
+    border: none!important;
+}
+
+.form-login .card-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none!important;
+    background-color: rgba(0,0,0,0);
+}
+
+.form-login .details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-decoration: underline;
+}
+
+.auth-logo{
+    margin-bottom: 20px;
+}
+
+.auth-logo.user{
+    border-radius: 100%;
+    margin-bottom: 20px;
+}
+
+.auth-logo.user img{
+    border-radius: 100%;
+}
+
+.auth-logo img{
+    width: 100px;
+}
+
+.form-login button {
+    border: none;
+    background: rgb(0, 153, 255);
+    width: 100%;
+    border-radius: 0px;
+}
+
+.form-login .card-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login .form-group{
+    margin-top: 30px;
+}
+
