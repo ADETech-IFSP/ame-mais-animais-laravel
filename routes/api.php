@@ -17,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/species', function(){
+    $species = \App\Models\Species::all();
+    return $species;
+});
+
+Route::get('species/{id}/breeds', function($id){
+    $specie = \App\Models\Species::find($id);
+    return $specie->breeds;
+});

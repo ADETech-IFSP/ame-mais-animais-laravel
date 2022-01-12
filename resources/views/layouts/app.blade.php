@@ -5,9 +5,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/assets/css/globals.css" rel="stylesheet">
     <title>AMA - Web</title>
 </head>
-<body>
+<body class="app-content">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">AMA</a>
@@ -31,8 +32,10 @@
         <div class="container">
             <div class="row">
                 <nav class="col-md-12">
-                    <div >
-                        <img src="img/logo.png" alt="">
+                    <div class="nav-buttons">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-home"></i>
+                        </button>
                     </div>
                 </nav>
             </div>

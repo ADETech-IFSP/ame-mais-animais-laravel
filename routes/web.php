@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PetController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,13 +17,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/home', function () {
-    $user = auth()->user();
-    $photo = str_replace("public", "/storage", $user->profile_picture);
-    return "
-        <img src='{$photo}' />
-    ";
-})->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth');
+
+Route::post('/pet/create', [PetController::class, 'create'])->name('pet.create')->middleware('auth');
+Route::get('/pet/{id}', [PetController::class, 'show'])->name('pet.show')->middleware('auth');
+Route::get('/pet/{id}/edit', [PetController::class, 'edit'])->name('pet.edit')->middleware('auth');
+Route::post('/pet/{id}/edit', [PetController::class, 'update'])->name('pet.update')->middleware('auth');
+Route::get('/pet/{id}/delete', [PetController::class, 'delete'])->name('pet.delete')->middleware('auth');
 
 Route::get('/', [AuthController::class, 'index'])->name('auth.login');
 Route::post('/', [AuthController::class, 'login'])->name('auth.login.post');
